@@ -5,4 +5,5 @@ package com.one.duanone.fragment;
  */
 public interface PagerChange {
         void onPageChange(int pager);
+        int a = 0;
 }
