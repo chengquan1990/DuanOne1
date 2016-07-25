@@ -70,7 +70,7 @@ public class TabBottomFragment extends BaseFragment implements View.OnClickListe
         changePager(currentPager);
 
     }
-    int a = 0;
+
     private void changePager(int page) {
         if (listener == null)
             return;
