@@ -40,6 +40,10 @@ public class TabBottomFragment extends BaseFragment implements View.OnClickListe
         $(R.id.find_linear).setOnClickListener(this);
         $(R.id.message_linear).setOnClickListener(this);
 
+        //让首页默认是选中状态
+        imageViewArray[0].setSelected(true);
+        textViewArray[0].setSelected(true);
+
         return view;
     }
 
@@ -66,8 +70,10 @@ public class TabBottomFragment extends BaseFragment implements View.OnClickListe
         changePager(currentPager);
 
     }
-    private void changePager(int page){
-        if (listener==null)
+
+
+    private void changePager(int page) {
+        if (listener == null)
             return;
         listener.onChangPager(page);
     }
@@ -79,7 +85,7 @@ public class TabBottomFragment extends BaseFragment implements View.OnClickListe
     @Override
     public void onClick(View v) {
         int pager = -1;
-        switch (v.getId()){
+        switch (v.getId()) {
             case R.id.home_linear:
                 pager = 0;
                 break;
